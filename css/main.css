@@ -316,18 +316,18 @@ template {
   display: none;
 }
 
+.header {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
 html {
   height: 100%;
 }
 
 body {
   background-color: #b27124;
-}
-
-.header {
-  text-align: center;
-  color: white;
-  text-shadow: 0 0 10px black;
 }
 
 .game {
