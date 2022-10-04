@@ -5,23 +5,19 @@ class Box {
   }
 
   getTopBox() {
-    if (this.y === 0) return null;
-    return new Box(this.x, this.y - 1);
+    return this.y === 0 ? null : new Box(this.x, this.y - 1);
   }
 
   getRightBox() {
-    if (this.x === 3) return null;
-    return new Box(this.x + 1, this.y);
+    return this.x === 3 ? null : new Box(this.x + 1, this.y);
   }
 
   getBottomBox() {
-    if (this.y === 3) return null;
-    return new Box(this.x, this.y + 1);
+    return this.y === 3 ? null : new Box(this.x, this.y + 1);
   }
 
   getLeftBox() {
-    if (this.x === 0) return null;
-    return new Box(this.x - 1, this.y);
+    return this.x === 0 ? null : new Box(this.x - 1, this.y);
   }
 
   getNextdoorBoxes() {
@@ -205,9 +201,9 @@ class Game {
 
     // Render message
     if (status === "won") {
-    document.querySelector(".footer_message h1").textContent = "You win!";
+      document.querySelector(".footer_message h1").textContent = "You win!";
     } else {
-    document.querySelector(".footer_message h1").textContent = "";
+      document.querySelector(".footer_message h1").textContent = "";
     }
   }
 }
